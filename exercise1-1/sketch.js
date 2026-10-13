@@ -15,8 +15,9 @@ function setup() {
 function draw() {
     fill(0, g, b);
     circle(circleX, circleY, circleW);
-    if (circleX === width - cricleW / 2) {
+    if (circleX >= width - circleW / 2) {
         circleY = (circleY + circleW) % height;
+        circleX = -20;
     }
     circleX = circleX + circleW % width;
     b = (b + 1) % 255;
